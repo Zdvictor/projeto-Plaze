@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PLAZE</title>
+
+
+    <link rel="icon" href="img/logo1.png">
+
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<!-- Bootstrap JavaScript Bundle (incluindo Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- jQuery (necessário para alguns componentes interativos) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<!-- Popper.js (necessário para alguns componentes interativos) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+
+    <!---Estilo CSS--->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+    <script src="app.js"></script>
+
+  </head>
+
+  <body>
+
+    <header>
+
+
+
+                <!-- Início Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+
+      <!-- Início Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="img/logo1.png" width="192" class="img-fluid" alt="Logo">
+      </a> <!-- Fim Logo -->
+
+      
+
+
+      <!-- Início Menu Hamburguer -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacao-principal" aria-controls="navegacao-principal" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button><!-- Fim Menu Hamburguer -->
+
+      <!-- Início Navegação Listas -->
+      <div class="collapse navbar-collapse" id="navegacao-principal">
+
+
+
+
+        <!-- Início Ul -->
+        <ul class="navbar-nav alinhar-direita">
+
+          <li class="nav-item">
+            <a class="btn-custom nav-link" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="btn-custom nav-link" href="#">Jogos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="btn-custom nav-link" href="#">Deposito</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="btn-custom nav-link" href="#">Saque</a>
+          </li>
+
+          <li class="nav-item barra"></li>
+
+          <!-- Botão Entrar -->
+          <li class="nav-item">
+            <a onclick="logar()" class="btn btn-outline-secondary text-info nav-link mr-2 celular" href="#">Entrar</a>
+          </li><!-- Botão Entrar -->
+
+          <!-- Botão Cadastrar -->
+          <li class="nav-item">
+            <a onclick="avisoCadastro()" class="btn btn-outline-secondary text-info nav-link celular" href="#">Cadastre-Se</a>
+          </li><!-- Botão Cadastrar -->
+
+        </ul><!-- Fim Ul -->
+
+      </div><!-- Fim Navegação Listas -->
+
+
+
+    </nav><!-- Fim Navegação -->
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="area-conteudo-principal">
+      
+      <div class="container">
+
+
+        <div class="row">
+
+        
+
+         <div  class="col-md-6">
+          
+
+          <div id="carousell" class="carousel slide" data-bs-ride= "carousel">
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/neymarblaze2.png" class="img-fluid"  alt="Slide 1">
+              </div>
+
+              <div class="carousel-item">
+                <img src="img/neymarblaze.png" class="img-fluid" alt="Slide 2">
+              </div>
+
+              <div class="carousel-item">
+                <img src="img/neymarblaze3.png" class="img-fluid" alt="Slide 2">
+              </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#carousell" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              
+            </a>
+
+
+            <a class="carousel-control-next" href="#carousell"  data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              
+            </a>
+        </div>
+          
+          <div>
+            
+            <h2 class="neymar text-center">Neymar da Silva Santos Júnior</h2>
+
+            <h4 class="text-center text-info-emphasis" >Patrocinador Oficial Da PLAZE</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="col-md-6 align-self-center">
+          
+          <h1 class="text-light">PLAZE</h1>
+
+          <p class="text-light" style="font-size: 1.2em;">Participe da emoção na PLAZE: Faça suas apostas e tenha a chance de ganhar grandes prêmios em dinheiro!</p>
+
+
+          <input onkeyup="pesquisarJogo()" id="pesquisa-jogos" class="form-control text-center d-sm-block d-none custom" type="text" name="" placeholder="Pesquise o Nome do Jogo">
+
+
+
+          
+          
+          <div class="row d-sm-block d-none">
+
+            <div class="col-md-12 text-center">
+              <a href="">
+                <img class="mt-4" id="fotos">
+              </a>
+            </div>
+
+
+          </div> 
+
+
+        </div>
+
+
+      </div>
+        
+
+
+
+
+        
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+    <section>
+      
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="exampleModalLabel">Aviso Cadastre-Se</h5>
+      </div>
+      <div class="modal-body">
+          
+
+      Ao clicar no botão "Concordar" na plataforma da PLAZE, você está oficialmente declarando e confirmando ser maior de idade. Essa ação reflete seu pleno entendimento e aceitação das políticas, termos e condições estabelecidos pela casa de apostas fictícia PLAZE. É crucial revisar minuciosamente todas as informações disponibilizadas antes de concordar, uma vez que essa concordância implica seu consentimento e conformidade com as diretrizes estabelecidas pela PLAZE. Caso haja dúvidas ou inseguranças, recomendamos buscar esclarecimentos adicionais junto à equipe de suporte. Ressaltamos a importância de agir de acordo com as leis e regulamentações locais relacionadas à idade e ao consentimento em atividades de apostas. <br><br>
+
+     
+        
+       
+      
+      <input onclick="aceitei()" value="0" id="aceitar_termos" type="radio" name="">
+      <label>Concordar</label><br>
+      <label id="recusado"></label>
+      
+        
+      </div>
+      <div class="modal-footer">
+        <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button onclick="irCadastro()" type="button" class="btn btn-primary">Ir Para O  Cadastro</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </section>
+
+
+
+    <section>
+      
+
+
+      <!-- Modal 2 Entrar-->
+
+<div  class="modal fade" id="exampleModallogar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabellogar" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-success" id="exampleModalLabellogar">Logar-Se</h5>
+      </div>
+      <div class="modal-body">
+          
+
+     
+        <label class="text-uppercase text-primary">Digite Seu CPF<span id="alerta1"></span></label>
+        <input onkeyup ="verificarCadastro.ajustarCPFLogin()"  id="cpf" class="form-control" type="text" name="" placeholder="Preencha o Campo Com o CPF">
+
+        <label class="text-uppercase text-secondary mt-4">Digite Sua Senha<span id="alerta2"></span></label>
+        <input  id="senha" class="form-control " type="password" name="" placeholder="Preencha o Campo Com a SENHA">
+  
+        
+      </div>
+      <div class="modal-footer">
+        <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button onclick="verificarCadastro.receber()"  id="login" type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+     <section>
+      
+
+
+      <!-- Modal 3 Cadastrar-Se -->
+
+<div  class="modal fade" id="exampleModalcadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalcadastrar" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-success" id="exampleModalcadastrar">Cadastrar</h5>
+
+      </div>
+      <div class="modal-body">
+          
+
+     
+        <label class="text-uppercase text-primary">Digite Seu CPF<span id="alerta3"></span></label>
+        <input onkeyup ="verificarCadastro.ajustarCPF()"  id="registrar_cpf" class="form-control" type="text" name="" placeholder="Preencha o Campo Com o CPF">
+
+         <label class="text-uppercase text-info mt-4">Digite Sua Data de Nascimento<span id="alerta1"></span></label>
+          <input id="registrar_data" class="form-control" type="date" name="">
+
+        <label class="text-uppercase text-secondary mt-4">Digite Sua Senha<span id="alerta2"></span></label>
+        <input  id="registrar_senha" class="form-control " type="password" name="" placeholder="Preencha o Campo Com a SENHA">
+
+        <label class="text-uppercase text-warning mt-4">Confirme Sua Senha<span id="alerta_confirmarSenha"></span></label>
+        <input onkeyup="verificarCadastro.confirmarSenha()"  id="confirmar_senha" class="form-control mb-4 " type="password" name="" placeholder="Preencha o Campo Com a SENHA">
+
+        <div id="dados_faltantes"></div>
+        
+      </div>
+      <div class="modal-footer">
+        <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button onclick="verificarCadastro.checar()" id="login" type="button" class="btn btn-primary">Cadastrar-Se</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+    <!---Segunda Sessao--->
+    <section class="container">
+      
+      <h4 class="text-center ajuste text-uppercase">Venha jogar os melhores jogos que estão em alta!🔥🔥🔥🔥</h4>
+
+      <div id="segunda_sessao" class="row">
+        
+
+        <div class="col-md-12 align-self-center">
+          
+
+          <div class="row">
+            
+            <div class="col-md-4 text-center">
+              <img src="img/foto6.jpg" class="img-fluid">
+              <div class="d-grid">
+              <button type="button" class="mt-2 btn btn-primary btn-lg">CLIQUE AQUI PARA JOGAR🔥</button>
+             </div>
+            </div>
+
+            <div class="col-md-4">
+              <img src="img/foto7.jpg" class="img-fluid">
+              <div class="d-grid">
+              <button type="button" class="mt-2 btn btn-success btn-lg">CLIQUE AQUI PARA JOGAR🔥</button>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <img src="img/foto8.png" class="img-fluid">
+              <div class="d-grid">
+              <button type="button" class="mt-2 btn btn-secondary btn-lg">CLIQUE AQUI PARA JOGAR🔥</button>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+    <footer>
+      
+
+      <section  class="container">
+        
+        <div class="row">
+           
+          <div class="col-md-4">
+            
+            <img src="img/logo1.png" class="img-fluid">
+
+          </div>
+
+
+          <div class="col-md-4 align-self-center">
+            
+            <nav class="">
+              
+              <ul class="nav">
+                
+                <li class="nav-item">
+                  <a class="btn btn-primary btn-outline-info nav-link" href="">Sobre?</a>
+                </li>
+
+                <li class="btn btn-primary btn-outline-info nav-link">
+                  Parceiros
+                 </li>
+
+                 <li class="btn btn-primary btn-outline-info nav-link">
+                  Afiliados
+                 </li>
+
+              </ul>
+
+
+            </nav>
+
+          </div>
+
+
+          <div class="col-md-4 align-self-center rodape">
+
+              <a href=""><img src="img/instagram.png" class="img-fluid p-3"></a>
+              <a href=""><img src="img/facebook.png" class="img-fluid p-3"></a>
+              <a href=""><img src="img/twitter.png" class="img-fluid p-3"></a>
+         
+          </div>
+
+
+        </div>
+
+
+
+        <div class="text-white lead">
+          
+          A PLAZE é operada pela Proli, número de registro da empresa 000000, com endereço registrado em Groot, Cura e é licenciada e autorizada pelo governo de Cura. A PLAZE opera sob a Master License of Gaming Services Provider, N.V. #0000/JAZ Número da Licença: 000000. Seus pagamentos podem ser processados por  Trading  com endereço em ch, 30, 2nd andar, apartamento / escritório 000, 000, Nico, Cyprs e número de registro: HE 0000
+          <hr>
+          A PLAZE aceita apenas clientes com mais de 18 anos de idade. Apostar pode ser viciante. Jogue responsavelmente.<br>
+          <br><br>
+          © 2024 PLAZE.com Todos os direitos reservados.
+
+        </div>
+
+
+      </section>
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+  </body>
+</html>
